@@ -1,0 +1,33 @@
+/// Cadastrar Produto
+POST http://localhost:8080/produto
+Content-Type: application/json
+
+{
+  "id": 5,
+  "nome": "Tabuleiro Disney",
+  "descricao": "Tabuleiro personalizado do mundo disney",
+  "fotoUrl": "https://img.elo7.com.br/product/original/2A8BEA6/jogo-de-tabuleiro-princesas-disney-personalizado.jpg",
+  "dataCadastro": "2021-12-07",
+  "preco": "300.00"
+}
+
+###
+
+
+/// Buscar Produto
+GET http://localhost:8080/produto
+Accept: application/json
+
+###
+
+/// Buscar Produto por nome
+GET http://localhost:8080/produto/busca-nome?nome=Tabuleiro%20Disney
+Accept: application/json
+
+###
+
+/// Buscar Produto por Faixa de Preço
+GET http://localhost:8080/produto/busca-faixa-preco?valorMinimo=400.0&valorMaximo=560.0
+Accept: application/json
+
+###
